@@ -90,6 +90,8 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.15.4)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
@@ -239,6 +241,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   dotenv-rails
+  fast_jsonapi
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.2)
