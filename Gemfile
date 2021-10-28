@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 
 #fast json api for creating api 
 gem 'fast_jsonapi'
+gem 'geocoder'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

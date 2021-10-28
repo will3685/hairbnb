@@ -1,23 +1,13 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+
 import Salon from "./Salon";
 
+import {Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
-const ColumnSecond = styled.div`
-  background: #fff;
-  height: 100vh;
-  overflow: none;
-`
-const ColumnFirst = styled.div`
-  overflow: none;
-`
-
 const Home = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 `
 
 const Header = styled.div`
@@ -55,24 +45,23 @@ const Salons = () => {
     )
   })
 
+
   return (
-    <Fragment>
-      <Home>
-        <ColumnFirst>
+    <Home>
+      <Row>
+        <Col xs={7} >
           <Header>
             <h1>Choose your appointment</h1>
           </Header>
           <Grid>
             {grid}
           </Grid>  
-        </ColumnFirst>
-        <ColumnSecond>
-          <div>
-            The map will be rendered here.
-          </div>
-        </ColumnSecond>
-      </Home>
-    </Fragment>
+        </Col>
+        <Col xs={5}>
+         The map will be rendered here
+        </Col>
+      </Row> 
+    </Home>
   )
 }
 
