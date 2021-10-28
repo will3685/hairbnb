@@ -49,7 +49,7 @@ module Api
       private
 
       def salon_params
-        params.require(:salon).permit(:name, :description, :image_url)
+        params.require(:salon).permit(:name, :description, :image_url, :address)
       end
 
       def options

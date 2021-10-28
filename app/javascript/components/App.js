@@ -5,6 +5,7 @@ import Salons from "./Salons/Salons";
 import Salon from "./Salon/Salon";
 import Home from "./Home/Home";
 
+
 const App = () => {
   return (
    <Switch>

@@ -5,6 +5,8 @@ import Salon from "./Salon";
 
 import {Col, Row } from "react-bootstrap";
 import styled from "styled-components";
+import Map from "../Maps/Map";
+
 
 const Home = styled.div`
   overflow: hidden;
@@ -45,7 +47,6 @@ const Salons = () => {
     )
   })
 
-
   return (
     <Home>
       <Row>
@@ -58,7 +59,7 @@ const Salons = () => {
           </Grid>  
         </Col>
         <Col xs={5}>
-         The map will be rendered here
+         <Map />
         </Col>
       </Row> 
     </Home>
