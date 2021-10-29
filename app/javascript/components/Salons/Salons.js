@@ -11,7 +11,6 @@ import Map from "../Maps/Map";
 const Home = styled.div`
   overflow: hidden;
 `
-
 const Header = styled.div`
   padding: 20px 0 0 20px;
 
@@ -19,7 +18,6 @@ const Header = styled.div`
     font-size: 42px;
   }
 `
-
 const Grid = styled.div`
   padding: 20px 10px 20px 20px;
 `
@@ -46,6 +44,7 @@ const Salons = () => {
       />
     )
   })
+
 
   return (
     <Home>

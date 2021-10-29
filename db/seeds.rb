@@ -8,26 +8,17 @@
 
 salons = Salon.create([
   {
-    name: "Yazmin Beauty",
+    name: "Afro Hair",
     description: "Have your braids done with us",
-    image_url: "https://open-flights.s3.amazonaws.com/American-Airlines.png"
-  },
-  {
-    name: "Laurel Beauty",
-    description: "Perfect place to have your braids done",
-    image_url: "https://open-flights.s3.amazonaws.com/Alaska-Airlines.png"
+    image_url: "https://open-flights.s3.amazonaws.com/American-Airlines.png",
+    address: "16 Villa Gaudelet, Paris"
   },
 ])
 
 reviews = Review.create([
   {
-    description: "Yazmin is a perfect professional, farei novamente",
+    description: "Yazmin is a perfect professional",
     score: 4,
-    salon: salons.first
-  },
-  {
-    description: "perfect professional",
-    score: 5,
     salon: salons.first
   },
 ])
