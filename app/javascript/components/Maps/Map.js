@@ -2,16 +2,15 @@ import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 
 import axios from "axios";
-// import SalonMarker from './Marker';
 
 const Map = () => {
 
   const [viewport, setViewport] = useState({
-    latitude: 48.8582,
-    longitude: 2.2945,
+    latitude: -22.9831351,
+    longitude: -43.2055487,
     width: window.innerWidth,
     height: window.innerHeight,
-    zoom: 10
+    zoom: 10.314538019179356
   })
 
   const [ salons, setSalons ] = useState([])

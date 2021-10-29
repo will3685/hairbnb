@@ -10,8 +10,7 @@ salons = Salon.create([
   {
     name: "Afro Hair",
     description: "Have your braids done with us",
-    image_url: "https://open-flights.s3.amazonaws.com/American-Airlines.png",
-    address: "16 Villa Gaudelet, Paris"
+    address: "Rua Barão da Torre 32, Ipanema, Rio de Janeiro, Brasil"
   },
 ])
 

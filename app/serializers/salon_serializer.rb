@@ -1,6 +1,6 @@
 class SalonSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :description, :image_url, :slug, :avg_score, :address, :latitude, :longitude
+  attributes :name, :description, :slug, :avg_score, :latitude, :longitude, :address
 
   has_many :reviews
 end

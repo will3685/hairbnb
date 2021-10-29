@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import 'mapbox-gl/dist/mapbox-gl.css';
+import 'antd/dist/antd.css';
 
 import App from '../components/App'
 

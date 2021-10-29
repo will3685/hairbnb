@@ -1,20 +1,16 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import BookCategory from './BookCategory'
 import CardCategory from './Cards/CardCategory'
 import styled from "styled-components";
 
+import {Container} from "react-bootstrap";
+
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
 `
 const Header = styled.div`
-  h1 {
-    font-size: 42px;
-  }
-`
-const BookCard = styled.div`
- padding: 40px;
+  padding: 12px;
 `
 
 
@@ -36,14 +32,14 @@ const grid = home.map(item => {
 })
 
   return (
-    <BookCard>
+    <Container>
       <Header>
-        <h1>Choose the category of your book</h1>
+        <h2>Choose the category of your book</h2>
       </Header>
       <Wrapper>
         {grid}
       </Wrapper>
-    </BookCard>
+    </Container>
   )
 }
 
