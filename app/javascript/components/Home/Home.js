@@ -9,7 +9,6 @@ import Footer from "./Footer"
 
 import styled from "styled-components";
 import {Container} from "react-bootstrap";
-import { Divider } from 'antd';
 
 const Wrapper = styled.div`
   display: flex;
@@ -75,7 +74,6 @@ const gridEvent = event.map(event => {
           <Wrapper>
             {gridEvent}
           </Wrapper>
-          <Divider />
         </HomeWrapper>
       </Container>
       <FooterWrapper>

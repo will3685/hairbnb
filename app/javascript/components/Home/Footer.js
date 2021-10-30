@@ -1,11 +1,17 @@
 import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
-
+import { Container } from "react-bootstrap";
+import { Divider } from 'antd';
 
 import {
   Box,
   FooterLink,
   Heading,
+  Row,
+  Column,
+  FooterSocial,
+  HeadingSocial,
+  SocialIcon,
+  FooterLinkSocial
 } from "./FooterStyles";
   
 const Footer = () => {
@@ -16,67 +22,61 @@ const Footer = () => {
         NAPPY: A Stylist Platform for your Beauty
       </h2>
       <Container>
-      <Row>
-        <Col>
-          <Row>
+        <Row>
+          <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Aim</FooterLink>
-            <FooterLink href="#">Vision</FooterLink>
-            <FooterLink href="#">Testimonials</FooterLink>
-          </Row>
-        </Col>
-        <Col>
-          <Row>
+            <FooterLink href="#">How it works</FooterLink>
+            <FooterLink href="#">Investidores</FooterLink>
+            <FooterLink href="#">Nappy for work</FooterLink>
+            <FooterLink href="#">Carrer</FooterLink>
+          </Column>
+          <Column>
             <Heading>Services</Heading>
             <FooterLink href="#">Writing</FooterLink>
             <FooterLink href="#">Internships</FooterLink>
             <FooterLink href="#">Coding</FooterLink>
             <FooterLink href="#">Blog</FooterLink>
-          </Row>
-        </Col>
-        <Col>
-          <Row>
+          </Column>
+          <Column>
             <Heading>Contact Us</Heading>
             <FooterLink href="#" target="_blank">Gmail</FooterLink>
             <FooterLink href="#" target="_blank">LinkedIn</FooterLink>
             <FooterLink href="#" target="_blank">GitHub</FooterLink>
             <FooterLink href="https://willtheard.dev" target="_blank">Will Theard</FooterLink>
-          </Row>
-        </Col>
-        <Col>
-          <Row>
-          <Heading>Social Media</Heading>
-            <FooterLink href="#">
-              <i className="fab fa-facebook-f">
-                <span style={{ marginLeft: "10px" }}>
-                  Facebook
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-instagram">
-                <span style={{ marginLeft: "10px" }}>
-                  Instagram
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-twitter">
-                <span style={{ marginLeft: "10px" }}>
-                  Twitter
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" }}>
-                  Youtube
-                </span>
-              </i>
-            </FooterLink>
-            </Row>
-          </Col>
-      </Row>
+          </Column>
+          <Column>
+            <Heading>Atendimento</Heading>
+            <FooterLink href="#" target="_blank">Central de ajuda</FooterLink>
+            <FooterLink href="#" target="_blank">Opções de cancelamento</FooterLink>
+            <FooterLink href="#" target="_blank">Confiança e Segurança</FooterLink>
+          </Column>
+        </Row>
+        <Divider />
+        <FooterSocial>
+          <HeadingSocial>
+            <Heading
+              style={{paddingRight:8}}
+            >© 2022 Nappy, Inc. · </Heading>
+            <FooterLink 
+              href="#"
+              style={{paddingRight:8}}
+              >Privacidade</FooterLink>
+            <FooterLink href="#">Termos E Compromissos</FooterLink>
+          </HeadingSocial>
+          <SocialIcon>
+            <FooterLinkSocial 
+              href="#"
+              >
+              <i className="fab fa-instagram"></i>
+            </FooterLinkSocial>
+            <FooterLinkSocial href="#">
+              <i className="fab fa-youtube"></i>
+            </FooterLinkSocial>
+            <FooterLinkSocial href="#">
+              <i className="fab fa-linkedin"></i>
+            </FooterLinkSocial>
+          </SocialIcon>
+        </FooterSocial>
       </Container>
     </Box>
   )

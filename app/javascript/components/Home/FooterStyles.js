@@ -3,25 +3,19 @@ import styled from 'styled-components';
 export const Box = styled.div`
   position: absolute;
   width: 100%;
-  padding-bottom: 48px;
+  padding-bottom: 8px;
   padding-top: 24px;
 `;
    
 export const Column = styled.div`
    display: flex;
    flex-direction: column;
-   text-align: center;
+   text-align: left;
  `;
    
 export const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 
-                         minmax(185px, 1fr));
-  grid-gap: 20px;
-   
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, 
-                           minmax(200px, 1fr));
+  display: flex;
+  justify-content: space-between;
   }
 `;
    
@@ -39,3 +33,27 @@ export const Heading = styled.p`
   font-size: 18px;
   font-weight: bold;
 `;
+
+export const FooterSocial = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+export const HeadingSocial = styled.div`
+  display: flex;
+`
+export const SocialIcon = styled.div`
+ display: flex;
+ align-items: center;
+`
+
+export const FooterLinkSocial = styled.a`
+  padding-left: 12px;
+  font-size: 32px;
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: green;
+    transition: 200ms ease-in;
+}
+`
