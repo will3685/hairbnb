@@ -22,7 +22,7 @@ const CardHosting = () => {
       </Card.Grid >
       <Card.Grid 
         hoverable={false}
-        style={{ width: '50%', height: 484}}
+        style={{ width: '50%', height: 484, backgroundColor: 'gray'}}
         ></Card.Grid>
     </Card>
   )

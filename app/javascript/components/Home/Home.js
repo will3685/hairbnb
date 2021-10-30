@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 import BookCategory from './BookCategory'
+import EventCategory from "./EventCategory";
 import CardCategory from './Cards/CardCategory'
 import CardHosting from "./Cards/CardHosting";
+import CardEvent from "./Cards/CardEvent";
 
 import styled from "styled-components";
 import {Container} from "react-bootstrap";
@@ -24,21 +26,31 @@ const HomeWrapper = styled.div`
 `
 
 const Home = () => {
-  const [ home, setHome] = useState([])
+  const [ book, setBook] = useState([])
+  const [ event, setEvent] = useState([])
 
   useEffect(() => {
-    setHome(BookCategory)
-  }, [home.length])
+    setBook(BookCategory)
+    setEvent(EventCategory)
+  }, [])
 
-const grid = home.map(item => {
+const gridCategory = book.map(book => {
   return (
     <CardCategory 
-     key={item.id}
-     attributes={item}
+     key={book.id}
+     attributes={book}
     />
   )
 })
 
+const gridEvent = event.map(event => {
+  return (
+    <CardEvent 
+     key={event.id}
+     attributes={event}
+    />
+  )
+})
   return (
     <Container>
         <HomeWrapper>
@@ -46,11 +58,17 @@ const grid = home.map(item => {
           <h2>Choose the category of your book</h2>
         </Header>
         <Wrapper>
-          {grid}
+          {gridCategory}
         </Wrapper>
         <WrapperHost>
           <CardHosting/>
         </WrapperHost>
+        <Header>
+          <h2>Descubra tudo relaciona a beleza perto de você</h2>
+        </Header>
+        <Wrapper>
+          {gridEvent}
+        </Wrapper>
       </HomeWrapper>
     </Container>
   )
