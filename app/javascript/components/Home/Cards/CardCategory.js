@@ -9,7 +9,7 @@ const CardCategory = (props) => {
     <Link to={"/salons"}>
       <Card 
         hoverable
-        style={{ width: 284 }}
+        style={{ width: 284, borderRadius: 12 }}
         cover={<img alt="book-category-image" src={props.attributes.image_url} />}
         >
         <Meta title={props.attributes.name} description={props.attributes.description} />

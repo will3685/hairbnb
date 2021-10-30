@@ -14,7 +14,7 @@ const BookCategory = [
   {
     id: 3,
     name: "Book Make Up Artist",
-    description: "Tudo relaciona a mua",
+    description: "Tudo relaciona a MUA",
     image_url: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
   },
   {
