@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
 import BookCategory from './BookCategory'
 import EventCategory from "./EventCategory";
 import CardCategory from './Cards/CardCategory'
 import CardHosting from "./Cards/CardHosting";
 import CardEvent from "./Cards/CardEvent";
+import Footer from "./Footer"
 
 import styled from "styled-components";
 import {Container} from "react-bootstrap";
+import { Divider } from 'antd';
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,6 +24,9 @@ const Header = styled.div`
   padding-bottom: 12px;
 `
 const HomeWrapper = styled.div`
+  overflow: hidden;
+`
+const FooterWrapper = styled.div`
   overflow: hidden;
 `
 
@@ -52,25 +57,31 @@ const gridEvent = event.map(event => {
   )
 })
   return (
-    <Container>
-        <HomeWrapper>
-        <Header>
-          <h2>Choose the category of your book</h2>
-        </Header>
-        <Wrapper>
-          {gridCategory}
-        </Wrapper>
-        <WrapperHost>
-          <CardHosting/>
-        </WrapperHost>
-        <Header>
-          <h2>Descubra tudo relaciona a beleza perto de você</h2>
-        </Header>
-        <Wrapper>
-          {gridEvent}
-        </Wrapper>
-      </HomeWrapper>
-    </Container>
+    <Fragment>
+      <Container>
+          <HomeWrapper>
+          <Header>
+            <h2>Choose the category of your appointment</h2>
+          </Header>
+          <Wrapper>
+            {gridCategory}
+          </Wrapper>
+          <WrapperHost>
+            <CardHosting/>
+          </WrapperHost>
+          <Header>
+            <h2>Descubra tudo relaciona a beleza perto de você</h2>
+          </Header>
+          <Wrapper>
+            {gridEvent}
+          </Wrapper>
+          <Divider />
+        </HomeWrapper>
+      </Container>
+      <FooterWrapper>
+        <Footer />
+      </FooterWrapper>
+    </Fragment>
   )
 }
 
