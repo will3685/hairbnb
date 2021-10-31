@@ -51,7 +51,7 @@ const Salons = () => {
       <Row>
         <Col xs={7} >
           <Header>
-            <h1>Choose your appointment</h1>
+            <h1>Check your appointment</h1>
           </Header>
           <Grid>
             {grid}

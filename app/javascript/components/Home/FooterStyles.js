@@ -48,8 +48,8 @@ export const SocialIcon = styled.div`
 `
 
 export const FooterLinkSocial = styled.a`
-  padding-left: 12px;
-  font-size: 32px;
+  padding-left: 8px;
+  font-size: 28px;
   color: #000;
   text-decoration: none;
   &:hover {
