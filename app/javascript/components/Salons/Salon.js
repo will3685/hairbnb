@@ -1,14 +1,23 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+
+
+import { Card, Carousel } from "react-bootstrap";
 import styled from "styled-components";
 
 const Flex = styled.div`
   display: flex;
-  border: 1px solid #efefef;
-  margin-bottom: 60px;
-  background: #fff;
-  height: 50vh;
-  border-radius: 10px;
+  // justify-content: space-between;
+  // border: 1px solid #efefef;
+  // margin-bottom: 60px;
+  // background: #fff;
+  // height: 50vh;
+  // border-radius: 10px;
+`
+
+const FlexContent = styled.div`
+  display: flex;
+  justify-content: "space-between";
 `
 
 const SalonInfo = styled.div`
@@ -40,25 +49,30 @@ const LinkWrapper = styled.div`
 
 const Salon = (props) => {
   return (
+
+    <Fragment>
+      <Card style={{ height: 368, marginBottom: 24}}>
         <Flex>
-          <div className="salon-image">
-            <img src={props.attributes.image_url} alt={props.attributes.name} />
-          </div>
-          <SalonInfo>
+          <Carousel style={{ height:368, width: "50%"}}>
+            <Carousel.Item>
+              <img /> 
+            </Carousel.Item>
+          </Carousel>
+          <FlexContent> 
             <div>
               <h3>{props.attributes.name}</h3>
-              <div className="salon-description">{props.attributes.description}</div>
-              <Review>
-                <div className="salon-review">{props.attributes.avg_score} Estrelas</div>
-                <div>(300 comentários)</div>
-              </Review>
+              <h4>{props.attributes.description}</h4>
+              <p>{props.attributes.avg_score} Estrela</p>
+              <p>(300 comentários)</p>
               <LinkWrapper>
-                <Link to={`/salons/${props.attributes.slug}`}> View Salon </Link>
+               <Link to={`/salons/${props.attributes.slug}`}> View Salon </Link>
               </LinkWrapper>
             </div>
             <div>Heart</div>
-          </SalonInfo>
+          </FlexContent>
         </Flex>
+      </Card>
+    </Fragment>
   )
 }
 

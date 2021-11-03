@@ -28,7 +28,7 @@ const Footer = () => {
             <FooterLink href="#">How it works</FooterLink>
             <FooterLink href="#">Investidores</FooterLink>
             <FooterLink href="#">Nappy for work</FooterLink>
-            <FooterLink href="#">Carrer</FooterLink>
+            <FooterLink href="#">Career</FooterLink>
           </Column>
           <Column>
             <Heading>Services</Heading>

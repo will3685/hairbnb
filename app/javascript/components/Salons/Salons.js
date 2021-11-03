@@ -4,7 +4,10 @@ import axios from "axios";
 import Salon from "./Salon";
 
 import {Col, Row } from "react-bootstrap";
+import { Divider } from "antd";
 import styled from "styled-components";
+
+
 import Map from "../Maps/Map";
 
 
@@ -53,6 +56,7 @@ const Salons = () => {
           <Header>
             <h1>Check your appointment</h1>
           </Header>
+          <Divider />
           <Grid>
             {grid}
           </Grid>  

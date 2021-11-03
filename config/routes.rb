@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
+      resources :products 
+      resources :products_orders
+      resources :customers, only: [:index, :show]
+      resources :orders, only: [:create, :index, :show]
       resources :salons, param: :slug
       resources :reviews, only: [:create, :destroy]
     end

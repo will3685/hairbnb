@@ -39,7 +39,7 @@ const Map = () => {
   const [selectedSalon, setSelectedSalon] = useState(null)
 
   return (
-    <div>
+    <>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={process.env.MAPBOX_API_KEY}
@@ -77,7 +77,7 @@ const Map = () => {
           ) : null
         }
       </ReactMapGL>
-  </div>
+  </>
   )
 }
 

@@ -52,9 +52,10 @@ const ThumbnailGallery = () => {
 const ThumbnailGalleryCSS = styled.div`
   background: #ddd;
   height: 500px;
-  width: 1024px;
+  width: 100%;
   margin: 40px auto;
   display: flex;
+  border-radius: 8px;
 
   .left,
   .right {

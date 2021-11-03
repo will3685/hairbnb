@@ -76,9 +76,7 @@ const gridEvent = event.map(event => {
           </Wrapper>
         </HomeWrapper>
       </Container>
-      <FooterWrapper>
         <Footer />
-      </FooterWrapper>
     </Fragment>
   )
 }
